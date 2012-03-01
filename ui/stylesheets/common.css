@@ -17,8 +17,9 @@ header {
   background: linear-gradient(top, #45484d 0%,#000000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
 }
-header h1 {
+header h1 a, header h1 a:hover {
   color: #f0f0f0;
+  text-decoration: none;
 }
 
 
