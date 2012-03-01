@@ -11,8 +11,12 @@ table.table.table-striped
     tr
       td
         a.title(href='http://www.reddit.com/{!= link.permalink !}',target="_blank") {!= link.title !}   
-      td.score {!= link.score !}
-      td.ups {!= link.ups !}
-      td.downs {!= link.downs !}
-      td.comments {!= link.num_comments !}
+      td.value {!= link.score !}
+        span.delta.label {!= link.score_delta !}
+      td.value {!= link.ups !}
+        span.delta.label {!= link.ups_delta !}
+      td.value {!= link.downs !}
+        span.delta.label {!= link.downs_delta !}
+      td.value {!= link.num_comments !}
+        span.delta.label {!= link.num_comments_delta !}
     {! } !}

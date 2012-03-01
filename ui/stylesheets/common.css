@@ -22,12 +22,20 @@ header h1 a, header h1 a:hover {
   text-decoration: none;
 }
 
+.delta {
+  display: none; 
+  margin-left: 5px; 
+}
 
 #user .hero-unit {
   padding: 20px;
 }
 
 #links .title { display: block; }
+
+.value {
+  font-weight: bold; 
+}
 
 form input {
   display: block;
