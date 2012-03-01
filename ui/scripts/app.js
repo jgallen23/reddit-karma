@@ -27,7 +27,6 @@ var renderComments = function(comments) {
 
 var renderDetails = function(user) {
   request('http://www.reddit.com/user/'+user+'.json', function(data) {
-    console.log(data);
     var comments = [];
     var links = [];
     for (var i = 0, c = data.data.children.length; i < c; i++) {
@@ -38,7 +37,6 @@ var renderDetails = function(user) {
         links.push(item.data);
       }
     }
-    console.log(comments, links);
     renderLinks(links);
   });
 };
