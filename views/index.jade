@@ -1,0 +1,32 @@
+!!! 5
+html
+  head
+    title Reddit Karma Tracker
+    link(type='text/css', rel='stylesheet', href='ui/bootstrap/css/bootstrap.min.css')
+    link(type='text/css', rel='stylesheet', href='ui/stylesheets/common.css')
+    //script(src='ui/vendor/live.js')
+    meta(name="viewport",content="width = device-width, initial-scale = 1.0")
+  body
+    header
+      h1 Reddit Karma Tracker
+    form.well(method='GET', action='.')
+      input(type='text', name='user', placeholder="Reddit username")
+      input.btn-primary(type='submit')
+
+    div#user
+    div#links
+
+    footer Developed by Greg Allen&nbsp;(
+      a(href="http://twitter.com/jgaui", target="_blank") @jgaui
+      )
+
+    div#templates
+      script(type='text/html', data-template='user')
+        include templates/user
+      script(type='text/html', data-template='links')
+        include templates/links
+
+    script(src='ui/vendor/jquery.min.js')
+    script(src='ui/scripts/template.js')
+    script(src='ui/scripts/querystring.js')
+    script(src='ui/scripts/app.js')
