@@ -6,6 +6,15 @@ html
     link(type='text/css', rel='stylesheet', href='ui/stylesheets/common.css')
     //script(src='ui/vendor/live.js')
     meta(name="viewport",content="width = device-width, initial-scale = 1.0")
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24017782-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   body
     a(href="http://github.com/jgallen23/reddit-karma")
       img(style="position: absolute; top: 0; right: 0; border: 0;", src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67",alt="Fork me on GitHub")
