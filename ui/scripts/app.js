@@ -35,9 +35,9 @@ var renderLinks = function(links) {
   var tmp = $('[data-template=links]').html();
   for (var i = 0, c = links.length; i < c; i++) {
     var item = links[i];
-    getDelta(item, 'score');
-    getDelta(item, 'ups');
-    getDelta(item, 'downs');
+    //getDelta(item, 'score');
+    //getDelta(item, 'ups');
+    //getDelta(item, 'downs');
     getDelta(item, 'num_comments');
   }
   $("#links").template(tmp, { links: links });
@@ -68,7 +68,7 @@ var showDeltas = function() {
   $('.delta').each(function(i, item) {
     var el = $(this);
     var val = parseInt(el.text(), 10);
-    if (val === 0)
+    if (isNaN(val) || val === 0)
       return;
 
     if (val > 0) {
